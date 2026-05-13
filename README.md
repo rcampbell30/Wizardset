@@ -69,6 +69,27 @@ print(group_by(['hi', 'cat', 'dog'], len))  # {2: ['hi'], 3: ['cat', 'dog']}
 | `flatten_dict(d, parent_key='', sep='.')` | Flatten nested dict keys |
 | `unflatten_dict(d, sep='.')` | Convert flattened dict to nested |
 
+### Local Agents
+
+Wizardset now includes a small local agent set for maintaining the package as a beginner-friendly Python learning project.
+
+Run all agents from the repository root:
+
+```bash
+python -m agents.run_all_agents
+```
+
+The agents generate markdown reports in `reports/`:
+
+| Agent | Purpose | Output |
+|-------|---------|--------|
+| Function Auditor | Checks source functions, exports, docstrings and test mentions | `reports/wizardset_audit.md` |
+| Example Generator | Generates beginner and dinosaur-style examples | `reports/beginner_examples.md` |
+| README Coach | Suggests positioning and README improvements | `reports/readme_coach.md` |
+| Release Checker | Checks metadata, exports, tests and release readiness | `reports/release_check.md` |
+
+See `AGENTS.md` for the full agent guide.
+
 Each function includes docstrings and comments explaining how it works.  Open
 the source code to learn more about the implementation.
 
